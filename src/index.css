@@ -6,59 +6,82 @@
   font-size: 1rem;
 }
 
-body{
+body {
   background-color: antiquewhite;
 }
 
-.container{
+.container {
   width: 25%;
   margin: 2rem auto;
 }
 
-.wrapper{
-background: rgb(183,241,143);
-background: radial-gradient(circle, rgba(183,241,143,1) 8%, rgba(31,189,170,1) 77%);
+.wrapper {
+  background: rgb(183, 241, 143);
+  background: radial-gradient(
+    circle,
+    rgba(183, 241, 143, 1) 8%,
+    rgba(31, 189, 170, 1) 77%
+  );
   margin-bottom: 2rem;
   padding: 1rem;
-box-shadow: 17px 17px 13px -1px rgba(44,68,204,0.52);
-border-radius: 20px;
+  box-shadow: 17px 17px 13px -1px rgba(44, 68, 204, 0.52);
+  border-radius: 20px;
 }
 
-.name, .email, .phone, .location{
+.name,
+.email,
+.phone,
+.location {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
   align-items: center;
 }
-.email, .phone, .location{
-padding-left: 3.5rem;
+.email,
+.phone,
+.location {
+  padding-left: 3.5rem;
+}
+.email:hover,
+.phone:hover,
+.location:hover,
+.register:hover,
+.fullname:hover {
+  transform: scale(1.05);
+  background-color: rgb(183, 241, 143);
+  color: blue;
+  border-radius: 25px;
 }
 
-.register{
-  margin: 2rem;
+.register {
+  margin: 1rem;
+  padding: 1.5rem;
 }
 
-img{
+img {
   border-radius: 50%;
 }
 
-.age, .register{
-text-align: center;
-font-size: 1.2rem;
+.age,
+.register {
+  text-align: center;
+  font-size: 1.2rem;
 }
 
-.btn{
+.btn {
   display: flex;
   justify-content: center;
 }
 
-button{
+button {
   cursor: pointer;
-  padding:  1rem 2rem;
+  padding: 1rem 2rem;
   border-radius: 20px;
   background-color: rgb(222, 242, 183);
 }
 
-button:active{
+button:active {
   transform: scale(95%);
+  color: white;
+  background-color: rgba(44, 68, 204, 0.52);
 }

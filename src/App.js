@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { BsMailbox } from "react-icons/bs";
 import { FiPhoneCall } from "react-icons/fi";
-import { GrMapLocation } from "react-icons/gr";
+import { GoLocation } from "react-icons/go";
 
 const App = () => {
   const url = "https://randomuser.me/api";
@@ -25,12 +25,14 @@ const App = () => {
       <div className="wrapper">
         <div className="name">
           <img src={picture?.large} alt={name?.first} />
-          <p>
+          <p className="fullname" style={{padding : "1.5rem"}}>
             {name?.title}. {name?.first} {name?.last}
           </p>
         </div>
         <div className="email">
-          <BsMailbox size={44} />
+          <span>
+            <BsMailbox size={44} />
+          </span>
           <p>{email}</p>
         </div>
         <div className="phone">
@@ -38,14 +40,15 @@ const App = () => {
           <p> + {phone}</p>
         </div>
         <div className="location">
-          <GrMapLocation size={44} />
+          <GoLocation size={44} />
           <p>
             {location?.city} & {location?.country}
           </p>
         </div>
         {/* <p className="age">Age : {dob?.age}</p> */}
         <p className="register">
-          Register Date : {String(registered?.date).slice(0, 10).replaceAll("-", " / ")}
+          Register Date :{" "}
+          {String(registered?.date).slice(0, 10).replaceAll("-", " / ")}
         </p>
       </div>
       <div className="btn">
