@@ -5,7 +5,7 @@
 
 ## Visualization of the Website
 
-![Form](./gallery.gif)
+![Form](./user.gif)
 
 ## Description
 
