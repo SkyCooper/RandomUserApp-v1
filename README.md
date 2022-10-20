@@ -1,6 +1,7 @@
-# Project : Template
+# Project : Random User App
 
-## Check The Live Website ➡️ [Live Website](https://skycooper.github.io)
+## ⏬ Check The Live Website ⏬ <h1>https://cooper-randomuser.onrender.com<h1/>
+
 
 ## Visualization of the Website
 
@@ -8,7 +9,7 @@
 
 ## Description
 
-Project aims to create an image gallery app using React.
+Project aims to create an Random User app using React.
 
 ## Learning Outcomes
 
@@ -25,22 +26,15 @@ At the end of the project, you will be able to;
 ## Project Skeleton
 
 ```
-Image Gellery Project(folder)
+Random User App Project(folder)
 |
 |----README.md
 ├── public
 │     └── index.html
 ├── src
-│    ├── components
-│    │       ├── Picture.jsx
-│    ├── pages
-│    │       ├── Homepage.jsx
-│    ├── helper
-│    │       └── data.js
-│    ├── styles
-│    │       ├── style.css
 │    ├── App.js
 │    ├── index.js
+│    ├── index.css
 └── package.json
 ```
 
@@ -53,7 +47,7 @@ You can see the visual representation of the website above.
 
 - Step 1: Create React App using `npx create-react-app image-gallery`
 
-- Step 2: For images you can use [Images](./src/helper/data.js).
+- Step 2: For your project you can use [RandomUser API](https://randomuser.me/api).
 
 - Step 3: Push your application into your own public repo on Github
 
@@ -61,7 +55,7 @@ You can see the visual representation of the website above.
 
 ## Resources
 
-- 🔥 You can use [`data.js`](./src/helper/data.js) for your own work.
+- 🔥 You can use [Random User API](https://randomuser.me/api) for your own work.
 
 ## Support
 Open an Issue, I will check it a soon as possible 👀
