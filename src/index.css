@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-  width: 25%;
+  min-width: 200px;
   margin: 2rem auto;
 }
 
@@ -84,4 +84,11 @@ button:active {
   transform: scale(95%);
   color: white;
   background-color: rgba(44, 68, 204, 0.52);
+}
+
+.load{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }

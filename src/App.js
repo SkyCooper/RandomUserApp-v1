@@ -3,29 +3,50 @@ import { useEffect, useState } from "react";
 import { BsMailbox } from "react-icons/bs";
 import { FiPhoneCall } from "react-icons/fi";
 import { GoLocation } from "react-icons/go";
+import spinner from "./loading.gif";
 
 const App = () => {
   const url = "https://randomuser.me/api";
   const [user, setUser] = useState("");
+  const [loading, setLoading] = useState(true);
 
   const getUser = async () => {
-    const { data } = await axios(url);
-    console.log(data.results[0]);
-    setUser(data.results[0]);
+    try {
+      const { data } = await axios(url);
+      console.log(data.results[0]);
+      setUser(data.results[0]);
+      setTimeout(() => {
+        setLoading(false);
+      }, 1000);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(true);
+    }
   };
 
   useEffect(() => {
     getUser();
   }, []);
 
-  const { name, dob, email, phone, picture, location, registered } = user;
+  // loading && <h1>Loading...</h1>
+  if (loading) {
+    return (
+      <div className="load">
+        <img src={spinner} alt="" />
+        <h1>Loading..</h1>
+      </div>
+    );
+  }
+
+  const { name, email, phone, picture, location, registered } = user;
 
   return (
     <div className="container">
       <div className="wrapper">
         <div className="name">
           <img src={picture?.large} alt={name?.first} />
-          <p className="fullname" style={{padding : "1.5rem"}}>
+          <p className="fullname" style={{ padding: "1.5rem" }}>
             {name?.title}. {name?.first} {name?.last}
           </p>
         </div>
