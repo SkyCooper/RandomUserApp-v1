@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-  min-width: 200px;
+  max-width: 500px;
   margin: 2rem auto;
 }
 
@@ -91,4 +91,5 @@ button:active {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 200px;
 }
